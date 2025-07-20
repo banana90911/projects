@@ -1,1 +1,12 @@
+## 1. Introduction
+In this project, we are tasked with predicting whether a process will generate supersymmetric particles or not. The dataset used for this analysis comprises 18 covariates, each representing different characteristics of the processes. The target variable, "Signal", is a binary indicator where 1 indicates that the process generated a supersymmetric particle, and 0 indicates that the process did not generate a supersymmetric particle.
+   The objective of this project is to build predictive models that can accurately determine the presence of supersymmetric particles based on the given covariates. By achieving this, we aim to contribute to the field of particle physics by providing a reliable computational method for detecting these elusive particles, which could offer significant insights into the fundamental forces of nature and the structure of matter.
+   To accomplish this objective, I employ two types of regression models: Generalized Linear Models (GLM) with Lasso (L1) regularization and Ridge (L2) logistic regression. I will evaluate these models based on their predictive accuracy and use the better-performing model to make final predictions on an unseen test dataset.
+   Throughout this process, I will employ various data preprocessing techniques, such as standardization and feature engineering, to enhance the model's performance. Additionally, I will use cross-validation and hyperparameter tuning to ensure that our models generalize well to new data. The final model will be selected based on its performance on a validation set and will be used to predict the presence of supersymmetric particles in the test dataset.
 
+## 2. Methodology
+In this project, several methods were employed to achieve objective of predicting whether a process will generate supersymmetric particles based on a dataset with 18 covariates. The methods used are designed to handle classification problems, perform variable selection, and optimize the predictive accuracy of our models. Below, the key methods used in this project, their objectives, and how they work are outlined.
+
+### 2-1) Data Splitting
+Objective is to divide the dataset into training and validation sets, allowing for model training and evaluation. 
+The dataset was split into two parts: 80% of the data, used for training the models and 20% of the data, used for evaluating the models. The createDataPartition function from the caret package was used to ensure that the splitting process was stratified, maintaining the proportion of the target variable in both sets.
