@@ -1,11 +1,11 @@
-### 1. Introduction
+## 1. Introduction
 In this project, we aim to develop a predictive model using linear regression to estimate the sale prices of properties. We start with our datasets, train and test, which include various features of properties such as area, year of construction, quality of material, condition, and several others, alongside the sale prices.
 The primary goal is to accurately predict the ‘SalePrice’ of properties based on their characteristics. To achieve this, a linear regression model will be applied, which is a fundamental statistical approach that assumes a linear relationship between the input variables and the single output variable (SalePrice). Then, we develop our models using additional features: best subset regression, step regression, cross validation, polynomial regression, regression splines, and smoothing splines. After developing the model using the training data, we will evaluate its performance on the validation data, which is splitted from original data, using the Root Mean Squared Error (RMSE) metric. RMSE will provide a clear indication of how close the predicted sale prices are to the actual values in the dataset, with a lower RMSE indicating a better fit of the model to the data. Lastly, final predictions will be made using the trained and evaluated model and test dataset. 
 
-### 2. Methodology
+## 2. Methodology
 The primary objective of this methodology is to accurately predict a numeric variable (SalePrice) using a linear regression model. Linear regression is used to establish a relationship between the dependent variable (SalePrice) and several independent variables (features of the houses).
 
-## 2-1) Data Preprocessing
+### 2-1) Data Preprocessing
 **Loading Data:** Train and test datasets were loaded using the ‘readr’ package in R.
 ```
 # load data
@@ -32,7 +32,7 @@ data <- data %>% mutate(across(where(is.character), as.factor))
 test <- test %>% mutate(across(where(is.character), as.factor))
 ```
 
-## 2-2) Feature Engineering
+### 2-2) Feature Engineering
 **Log-Transformation:** The SalePrice variable was log-transformed to stabilize the variance and make the distribution more normal. This helps in improving the performance of the linear regression model.
 ```
 # Log-transform SalePrice
@@ -61,7 +61,7 @@ train <- norm_data[trainIndex, ] # train dataset
 validation <- norm_data[-trainIndex, ] # validation dataset
 ```
 
-## 2-3) Multiple Linear Regression
+### 2-3) Multiple Linear Regression
 **Objective:** Predict the SalePrice using a simple and interpretable model based on the linear relationship between the predictors and the response variable.
 
 **Modeling:** A linear regression model was built using all available predictors.
@@ -75,7 +75,7 @@ rmse_lm <- calc_rmse(validation$SalePrice, predictions_lm)
 print(paste("rmse_lm: ", rmse_lm)) # 0.593680939406237
 ```
 
-## 2-4) Best Subsets Regression
+### 2-4) Best Subsets Regression
 **Objective:** Select the most relevant subset of predictors that best explains the variability in the response variable.
 
 **Variable Selection:** The regsubsets function was used to identify subsets of predictors that maximize the adjusted R-squared value.
@@ -95,7 +95,7 @@ rmse_bsr <- calc_rmse(validation$SalePrice, predictions_bsr)
 print(paste("rmse_bsr: ", rmse_bsr)) # 0.59504310857517
 ```
 
-## 2-5) Stepwise Regression
+### 2-5) Stepwise Regression
 **Objective:** Improve the linear regression model by iteratively adding or removing predictors based on the AIC criterion.
 
 **Variable Selection:** Stepwise regression (both forward and backward) was performed using the stepAIC function to select the optimal set of predictors.
@@ -111,7 +111,7 @@ rmse_sr <- calc_rmse(validation$SalePrice, predictions_sr)
 print(paste("rmse_sr: ", rmse_sr)) # 0.593581576851409
 ```
 
-## 2-6) Stepwise Regression
+### 2-6) Stepwise Regression
 **Objective:** Capture non-linear relationships between the predictors and the response variable by introducing flexibility into the model.
 
 **Modeling:** Spline terms were created for numeric predictors using the bs function from the splines package, with a specified degree of 3.
@@ -130,7 +130,7 @@ rmse_rs <- calc_rmse(validation$SalePrice, predictions_rs)
 print(paste("rmse_rs: ", rmse_rs)) # 0.551726329701176
 ```
 
-## 2-7) Smoothing Splines
+### 2-7) Smoothing Splines
 **Objective:** Provide a flexible yet smooth fit to the data by minimizing the penalized residual sum of squares.
 
 **Modeling:** A Generalized Additive Model (GAM) was constructed using the gam function from the mgcv package, fitting smoothing splines to the predictors.
@@ -145,7 +145,7 @@ rmse_ss <- calc_rmse(validation$SalePrice, predictions_ss)
 print(paste("rmse_ss: ", rmse_ss)) # 0.593721957145594
 ```
 
-## 2-8) Final Predictions on Test Data
+### 2-8) Final Predictions on Test Data
 The final model, based on regression splines, was used to predict SalePrice values for the test dataset. These predictions were then transformed back from the log scale and denormalized to obtain the final predicted SalePrice values, which were saved to a CSV file. 
 ```
 # prediction using test dataset
@@ -158,15 +158,15 @@ denorm_final_predictions <- exp(final_predictions * saleprice_sd + saleprice_mea
 write_csv(data.frame(Id = test_id, SalePrice = denorm_final_predictions), "/Users/siheonjung/Desktop/psu/summer 2024/stat380/2/data/final_predictions.csv")
 ```
 
-### 3. Data
+## 3. Data
 The dataset used in this analysis consists of a training set and a test set, both containing information about various attributes of houses. One difference between training set and test set is that the test set does not include SalePrice column, as it is the target variable to be predicted. 
 <img width="883" height="367" alt="Image" src="https://github.com/user-attachments/assets/c822a165-4979-48f5-a67c-a4aa8f641c10" />
 <img width="961" height="374" alt="Image" src="https://github.com/user-attachments/assets/b1e4de26-6e74-4110-8244-657c72d57d5c" />
 
 As mentioned above, data cleaning involved handling missing values and converting categorical variables.
 
-### 4. Analyze
+## 4. Analyze
 Initially, I have developed different linear regression models: multiple linear regression, best subsets regression, step regression, regression splines, and smoothing splines. Similar to the project in week 1, using all the features ultimately showed the best RMSE. Then, applying normalization, the RMSE, which had been over 10,000, decreased to 0.57. Then, I applied log-transform method, and strangely, the result showed a higher RMSE value (0.59) when both normalization and log transform methods were applied than when only normalization was applied. However, applying log-transform showed better performance with test dataset. As a result, among different models, regression splines model showed the lowest RMSE (0.5517). For hyperparameter tuning, I have tested five different degree values: 1 to 10, considering that high degree may result in overfitting. Finally, degree of 5 showed the lowest RMSE score. Therefore, regression splines model was used for final predictions.
 
-### 5. Conclusion
+## 5. Conclusion
 In this project, I developed a predictive model to estimate property sale prices using various regression techniques. Starting with comprehensive data preprocessing, I handled missing values, converted categorical variables, and normalized numeric features. I explored multiple models, including multiple linear regression, best subsets regression, stepwise regression, regression splines, and smoothing splines. Each model was evaluated using the Root Mean Squared Error (RMSE) on a validation set. Regression splines, which capture non-linear relationships by introducing spline terms for numeric predictors, performed best with the lowest RMSE. Hyperparameter tuning further improved the model, and the final regression spline model was used to predict sale prices on the test dataset. The final predictions showed the fair result score 22916.29873.
