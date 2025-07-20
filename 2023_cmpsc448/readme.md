@@ -9,3 +9,37 @@ Data files include two sets: train and test datasets. Train dataset has 25000 im
 **Convolutional Neural Network**
 
 Data Preprocessing: After reading the folders, I have created data frames for convenience in handling data. Then, I split train dataset to train and validation datasets with test_size = 0.3. 
+'''
+# Read train file
+data = os.listdir("/Users/siheonjung/Desktop/psu/fall 2023/cmpsc448/final project/data/train")
+
+
+labels = []
+for image in data:
+    if image.split(".")[0] == "dog":
+        labels.append(1)
+    else:
+        labels.append(0)
+
+
+df = pd.DataFrame({
+    "filename": data,
+    "label": labels
+})
+
+
+# Read test file
+test = os.listdir("/Users/siheonjung/Desktop/psu/fall 2023/cmpsc448/final project/data/test1")
+test_df = pd.DataFrame({
+    "filename": test
+})
+
+
+# Split data
+df["label"] = df["label"].replace({0: "cat", 1: "dog"})
+
+
+train_df, validate_df = train_test_split(df, test_size = 0.3, random_state = 42)
+train_df = train_df.reset_index(drop = True) # to establish a continuous index as well as remove one or more unwanted levels
+validate_df = validate_df.reset_index(drop = True)
+'''
