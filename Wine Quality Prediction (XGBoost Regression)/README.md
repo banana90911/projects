@@ -206,9 +206,11 @@ For data cleaning, the datasets were examined for missing values, and the target
 **Results:** The final model showed a significant improvement in prediction accuracy over the initial model. The tuned XGBoost model achieved lower RMSE on the validation dataset.
 
 ### 4-4) Residual Analysis
-Objective: Evaluate model predictions by analyzing residuals to identify potential areas for improvement.
-Description: Residual analysis involves examining the differences between predicted and actual values to detect patterns or biases that the model may have missed.
-Results: The absence of patterns in the residual plots confirmed the adequacy of the final model.
+**Objective:** Evaluate model predictions by analyzing residuals to identify potential areas for improvement.
+
+**Description:** Residual analysis involves examining the differences between predicted and actual values to detect patterns or biases that the model may have missed.
+
+**Results:** The absence of patterns in the residual plots confirmed the adequacy of the final model.
 
 
 ## 5. Conclusion
