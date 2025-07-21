@@ -10,17 +10,15 @@ spj5294@psu.edu, azg5941@psu.edu, hqg5209@psu.edu
 
 
 
-ABSTRACT
+## ABSTRACT
 In the contemporary digital financial era, the challenge of making stock market investing approachable and comprehensible for novice investors, particularly those belonging to Generation Z, has never been more pressing. Amidst this backdrop, StockGrader.io emerges as a unique platform, designed to improve the investing process by employing advanced predictive analytics centered around utilizing a Long Short-Term Memory (LSTM) model. This state-of-the-art approach enables the platform to accurately forecast stock prices for stocks within the S&P 500 index. By utilizing LSTM's unparalleled ability to analyze sequential time-series data with real-time market insights, StockGrader.io aims to dispel the complexities surrounding stock investment. Additionally, unique composite, single-value Stock Grades are created to represent the current performance of a stock, using multiple market indicators and weighing them accordingly. This simplifies decision-making for those new to the financial markets and significantly contributes to enhancing financial literacy. These algorithms are developed utilizing Python and Yahoo! Finance’s free API on the backend in combination with a Streamlit-based frontend application. The forthcoming report explains the development journey of StockGrader.io, spotlighting the strategic selection of LSTM for its predictive prowess in stock price movements. It further articulates the application’s intended impact on empowering emerging investors by improving their understanding and strategic investment guidance. Some constraints in the development of this tool include financial budget and time. Future work can provide additional resources to StockGrader.io to improve its impact and range of audience, including incorporating additional stock indexes and developing a StockGrader.io mobile application. 
 
 
-Table of Contents
-
-
-Abstract 											          1
-Table of Contents 										          2
-Introduction 											          3
-Literature Review 										          6 
+## Table of Contents
+Abstract 											          1 <br>
+Table of Contents 										          2 <br>
+Introduction 											          3 <br>
+Literature Review 										          6 <br>
 Methodology 										          7
 Planning
 Front-end
