@@ -63,11 +63,11 @@ In order to evaluate the performance of LSTM and CNN LSTM, Mean Squared Error (M
 <img width="393" height="372" alt="Image" src="https://github.com/user-attachments/assets/bbda8318-eec0-44ba-951d-4bc104098ac9" />
 
 ### 4. RESULTS 
-<img width="502" height="202" alt="Image" src="https://github.com/user-attachments/assets/8667b95e-bb31-498a-83c6-fbe0f8a3e1f5" />
+<img width="502" height="202" alt="Image" src="https://github.com/user-attachments/assets/8667b95e-bb31-498a-83c6-fbe0f8a3e1f5" /><br>
 
-<img width="466" height="386" alt="Image" src="https://github.com/user-attachments/assets/23b81bcb-9f1e-45dd-91fe-03831e173cfc" />
+<img width="466" height="386" alt="Image" src="https://github.com/user-attachments/assets/23b81bcb-9f1e-45dd-91fe-03831e173cfc" /><br>
 
-<img width="480" height="388" alt="Image" src="https://github.com/user-attachments/assets/029b356b-e119-47da-bd61-3f91ffc5839b" />
+<img width="480" height="388" alt="Image" src="https://github.com/user-attachments/assets/029b356b-e119-47da-bd61-3f91ffc5839b" /><br>
 
 The metrics shown in Table 3 for LSTM and CNN-LSTM  models demonstrate a significant performance difference  between the two. The LSTM model shows a high Mean  Squared Error (MSE) of 822.8722 and a Root Mean Squared  Error (RMSE) of 28.6857, indicating substantial prediction  errors. Additionally, its Mean Absolute Error (MAE) is  23.11519, and it exhibits a weak negative correlation  coefficient of -0.3835, suggesting its predictions are inversely  related to actual trends, which is generally undesirable. In  contrast, the CNN-LSTM model markedly outperforms the  LSTM with much lower error metrics: an MSE of 147.7533,  an RMSE of 12.1554, and an MAE of 6.6269. It also shows  a moderate positive correlation coefficient of 0.5726,  indicating that its predictions are more aligned with the actual  data trends. This analysis clearly highlights that the CNN LSTM model is superior for this dataset, capturing spatial or  temporal patterns more effectively than the LSTM model. 
 
