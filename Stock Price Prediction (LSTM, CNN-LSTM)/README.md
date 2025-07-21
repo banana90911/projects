@@ -1,4 +1,4 @@
-Stock Price Prediction Using Machine Learning:  LSTM & CNN-LSTM 
+# Stock Price Prediction Using Machine Learning:  LSTM & CNN-LSTM 
 Siheon Jung 
 Data science, B.S (engineering) 
 Pennsylvania State University 
