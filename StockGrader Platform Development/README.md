@@ -15,37 +15,40 @@ In the contemporary digital financial era, the challenge of making stock market 
 
 
 ## Table of Contents
-Abstract 											          1 <br>
-Table of Contents 										          2 <br>
-Introduction 											          3 <br>
-Literature Review 										          6 <br>
-Methodology 										          7
-Planning
-Front-end
-Back-end (LSTM)
-Back-end (Stock Grading)
-Risks
-Logical Testing
-Back-end Unit Testing
-Front-end Unit Testing
-Conclusions										        15
-Pros
-Cons
-Challenges
-Lessons Learned
-Future Work									  	        17
-References											        18
+Abstract			1 <br>
+Table of Contents		2 <br>
+Introduction			3 <br>
+Literature Review		6 <br>
+1. Methodology			7 <br>
+	1.1 Planning  <br>
+	1.2 Front-end  <br>
+	1.3 Back-end (LSTM)  <br>
+	1.4 Back-end (Stock Grading)  <br>
+	1.5 Risks  <br>
+	1.6 Logical Testing  <br>
+	1.7 Back-end Unit Testing  <br>
+	1.8 Front-end Unit Testing  <br>
+2. Conclusions			15  <br>
+	2.1 Pros  <br>
+	2.2 Cons  <br>
+	2.3 Challenges  <br>
+	2.4 Lessons Learned  <br>
+3. Future Work			17  <br>
+References			18  <br>
 
-1.  Introduction
+## 1.  Introduction
 As digital technology reshapes the financial sector, a significant gap persists in accessing investment tools for experienced versus novice investors. StockGrader.io emerges as a solution designed to empower the latter group, emphasizing Generation Z investors. Despite their keen interest in the stock market, these individuals often find themselves overwhelmed by the sheer amount of information publicly available. StockGrader.io addresses this by providing advanced analytics with LSTM and our unique Stock Grade, but also provides descriptions in layman’s terms of the algorithms' significance, enhancing a user’s understanding of the S&P 500 stock index.
+
 The complexity of the stock market, characterized by volatile price movements and an overwhelming amount of data, presents a tough challenge for novice investors. The development of StockGrader.io, is motivated by the need to provide an effective yet digestible tool for stock price prediction and evaluation. LSTM models are renowned for their ability to learn from data sequences, making them exceptionally suited for the time-series data inherent in stock price movements. This capability allows for more accurate and reliable predictions, a critical component in the price prediction analysis within StockGrader.io.
 The core purpose of StockGrader.io is to democratize stock market investing by making it accessible and comprehensible to a broader audience. The integration of LSTM into StockGrader.io serves several key objectives: to enhance the platform's predictive accuracy, to provide users with actionable insights based on sophisticated data analysis, and to educate users on the potential future performance of stocks. By doing so, StockGrader.io aims to remove barriers to investment for individuals lacking in financial expertise, ultimately fostering a more inclusive investing culture.
+
 The incorporation of LSTM models into StockGrader.io represents a significant technical advancement in the prediction of stock prices. LSTMs are particularly appropriate for this application due to their effectiveness in handling financial market volatility and temporal dependencies. They can capture long-term dependencies and patterns in historical stock data, which traditional models might overlook. This predictive capability is crucial for providing StockGrader.io users with reliable stock grades, which are directly influenced by the projected future performance of stocks. Accordingly, our application will use LSTM for stock price prediction, but we have designed a CNN-LSTM model that could be incorporated in future work, as there is potential for a CNN-LSTM model to perform better in stock price prediction compared to just an LSTM model.
+
 Our team is motivated to offer a tool that simplifies investment research and educates users about the dynamics of stock market movements, specifically the movement of the S&P 500 index. Through this, StockGrader.io is poised to play a role in helping novice investors become informed market participants capable of confidently navigating the complexities of the stock market.
 In summary, StockGrader.io represents a leap forward in making stock market investing more accessible and understandable for inexperienced investors. This paper will delve further into the technical underpinnings of the LSTM model and Stock Grade system, the design philosophy behind StockGrader.io, and the anticipated benefits of the platform.
 
 
-2. Literature Review
+## 2. Literature Review
 Many studies have explored the use of machine learning for predicting stock prices. Yet, a common issue they face is the challenge of accurately forecasting the volatile and rapidly changing patterns in stock movements. One study introduces a hybrid approach, combining machine learning and LSTM-based deep learning models for predicting stock prices. This methodology utilizes eight machine learning models, including multivariate linear regression, multivariate adaptive regression spline (MARS), regression tree, bootstrap aggregation (Bagging), extreme gradient boosting (XGBoost), random forest (RF), artificial neural network (ANN), and support vector machine (SVM) alongside four LSTM-based deep learning models. These models focus on multi-step forecasting using univariate and multivariate input data over one or two weeks. Their findings suggest that the most precise model for forecasting the following week's opening price of the NIFTY 50 index is the LSTM-based univariate model that utilizes data from the previous week. 
 Conversely, another study critiques the LSTM method, pointing out its weaknesses. Despite LSTMs being adept at identifying patterns over time, which is essential for time-series analysis like stock price prediction, their performance significantly depends on the input data's quality and relevance. The main challenges are the potential overload due to the high dimensionality of financial datasets and the necessity for substantial expertise to determine which features are predictive. Unlike LSTMs, the CNN-LSTM architecture marries the feature extraction capabilities of CNNs with LSTM's sequential data analysis strength, providing a robust framework for stock price prediction. This method excels in processing the complex, noisy, and non-linear data typical of the stock market by efficiently identifying key patterns in historical price data. The combined use of CNNs for initial feature extraction and LSTMs for understanding sequence dependencies enhances prediction accuracy and simplifies the data complexity for the LSTM, potentially reducing training times and computational expenses.
 In regards to the development of the composite Stock Grades, much of the inspiration behind its development comes from an industry unrelated to finance: American football. Our team was inspired by ESPN’s “Total QBR” grade. The grade itself is a single value, ranging from 0-100, where the best NFL Quarterbacks would have grades closer to 100 and the worst ones have grades closer to 0 [4]. In ESPN’s Total QBR grade, multiple variables are considered in the algorithm. Utilizing similar logic, our team successfully developed a Stock Grade value ranging from 0 to 1, where a 0 grade indicates a stock should be confidently sold, while a grade closer to 1 indicates a stock should be confidently bought. Like ESPN’s Total QBR grade, multiple variables were weighed and utilized in developing our Stock Grades, intending to reflect a stock’s current market performance. With this Stock Grading system, a novice investor can easily identify a stock that is performing well (and will continue to do so), or a stock that is doing the complete opposite. It is important to note that our Stock Grades are not a total solution to investment decisions but a single, yet powerful tool in the investing toolbox.  
