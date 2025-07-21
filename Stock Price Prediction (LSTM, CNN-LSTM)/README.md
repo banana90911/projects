@@ -63,43 +63,76 @@ In order to evaluate the performance of LSTM and CNN LSTM, Mean Squared Error (M
 <img width="393" height="372" alt="Image" src="https://github.com/user-attachments/assets/bbda8318-eec0-44ba-951d-4bc104098ac9" />
 
 ### 4. RESULTS 
+<img width="502" height="202" alt="Image" src="https://github.com/user-attachments/assets/8667b95e-bb31-498a-83c6-fbe0f8a3e1f5" />
+
+<img width="466" height="386" alt="Image" src="https://github.com/user-attachments/assets/23b81bcb-9f1e-45dd-91fe-03831e173cfc" />
+
+<img width="480" height="388" alt="Image" src="https://github.com/user-attachments/assets/029b356b-e119-47da-bd61-3f91ffc5839b" />
 
 The metrics shown in Table 3 for LSTM and CNN-LSTM  models demonstrate a significant performance difference  between the two. The LSTM model shows a high Mean  Squared Error (MSE) of 822.8722 and a Root Mean Squared  Error (RMSE) of 28.6857, indicating substantial prediction  errors. Additionally, its Mean Absolute Error (MAE) is  23.11519, and it exhibits a weak negative correlation  coefficient of -0.3835, suggesting its predictions are inversely  related to actual trends, which is generally undesirable. In  contrast, the CNN-LSTM model markedly outperforms the  LSTM with much lower error metrics: an MSE of 147.7533,  an RMSE of 12.1554, and an MAE of 6.6269. It also shows  a moderate positive correlation coefficient of 0.5726,  indicating that its predictions are more aligned with the actual  data trends. This analysis clearly highlights that the CNN LSTM model is superior for this dataset, capturing spatial or  temporal patterns more effectively than the LSTM model. 
 
 ### 5. CONCLUSIONS 
-In conclusion, this research presents a significant step  forward in the application of machine learning techniques for  stock price prediction, specifically through the utilization of  LSTM and CNN-LSTM models. The comparative analysis  
+In conclusion, this research presents a significant step  forward in the application of machine learning techniques for  stock price prediction, specifically through the utilization of  LSTM and CNN-LSTM models. The comparative analysis reveals that while traditional LSTM models offer certain  benefits, the hybrid CNN-LSTM architecture demonstrates superior capability in capturing complex temporal and spatial  patterns in stock data, which translates to more accurate  forecasts. This study underscores the importance of feature  extraction and the handling of sequence dependencies in  predicting stock prices. Moreover, the findings suggest that  enhancing machine learning models with CNN layers can  mitigate some of the inherent challenges posed by LSTM's  sensitivity to input feature relevance. These advancements  not only aid in better understanding the dynamic nature of  financial markets but also provide a promising direction for  future research. By focusing on refining these models and  exploring additional hybrid approaches, further  improvements in prediction accuracy and computational  efficiency can be achieved, thus offering valuable tools for  investors and analysts aiming to navigate the increasingly  complex world of stock trading.
 
-Correlation  Coefficient 
--0.3835 0.5726 
-reveals that while traditional LSTM models offer certain  benefits, the hybrid CNN-LSTM architecture demonstrates  
-
-FIGURE II: Graph of Actual and Predicted Prices by LSTM 
-superior capability in capturing complex temporal and spatial  patterns in stock data, which translates to more accurate  forecasts. This study underscores the importance of feature  extraction and the handling of sequence dependencies in  predicting stock prices. Moreover, the findings suggest that  enhancing machine learning models with CNN layers can  mitigate some of the inherent challenges posed by LSTM's  sensitivity to input feature relevance. These advancements  not only aid in better understanding the dynamic nature of  financial markets but also provide a promising direction for  future research. By focusing on refining these models and  exploring additional hybrid approaches, further  improvements in prediction accuracy and computational  efficiency can be achieved, thus offering valuable tools for  investors and analysts aiming to navigate the increasingly  complex world of stock trading.
-6. FUTURE WORKS 
+### 6. FUTURE WORKS 
 Building on the current research, there are several  avenues for future work that can potentially enhance the  accuracy and robustness of stock price prediction models.  
+
 Current models primarily utilize standard stock market  data such as opening, high, low, close prices, and volume.  Future models could benefit from incorporating additional  variables that influence stock prices. These may include  macroeconomic indicators such as GDP growth rates,  inflation data, and employment rates, as well as  microeconomic factors like company earnings reports,  dividend payouts, and sector performance. Including such  variables could provide a more holistic view of the factors  influencing stock prices. 
+
 While the CNN-LSTM model shows promise, exploring  other complex architectures could yield better results. For  instance, Transformer-based models, which have shown  remarkable success in various domains of natural language  processing, could be adapted for time series forecasting.  These models' ability to handle long-range dependencies  could be particularly beneficial for stock price prediction. 
+
 By addressing these aspects, future research can  significantly advance the field of stock price prediction,  offering more accurate, reliable, and comprehensive tools for  market analysis and decision-making. 
-REFERENCES 
+
+## REFERENCES 
 [1] Mehtab, S., Sen, J., Dutta, A. (2021). Stock Price Prediction Using  Machine Learning and LSTM-Based Deep Learning Models. In:  Thampi, S.M., Piramuthu, S., Li, KC., Berretti, S., Wozniak, M.,  Singh, D. (eds) Machine Learning and Metaheuristics Algorithms,  and Applications. SoMMA 2020. Communications in Computer and  Information Science, vol 1366. Springer, Singapore.  
 https://doi.org/10.1007/978-981-16-0419-5_8 
+
 [2] Lu, W., Li, J., Li, Y., Sun, A., & Wang, J. (2020). A CNN-LSTM Based Model to Forecast Stock Prices. , Article ID  
 performance analysis and discussion of implications. International  Journal of Financial Studies, 11(3), 94.  
 https://doi.org/10.3390/ijfs11030094 
+
+[3] Levine, R., & Zervos, S. (1996). Stock market development and  Long-Run growth. The World Bank Economic Review, 10(2), 323– 339. https://doi.org/10.1093/wber/10.2.323 
+
+[4] Alshubiri, F. (2021). The stock market capitalisation and financial  growth nexus: an empirical study of western European countries.  Future Business Journal, 7(1). https://doi.org/10.1186/s43093-021- 00092-7 
+
+[5] Home. (n.d.). https://www.oecd-ilibrary.org/sites/5fa1c6e1- en/index.html?itemId=/content/component/5fa1c6e1-en 
+
+[6] Ortiz-Ospina, E., Beltekian, D., & Roser, M. (2023, Dec 28). Trade  and globalization. Our World in Data.  
+https://ourworldindata.org/trade-and-globalization 
+
+[7] Roser, M., Arriagada, P., Hasell, J., Ritchie, H., & Ortiz-Ospina, E.  (2023, Dec 28). Economic growth. Our World in Data.  
+https://ourworldindata.org/economic-growth 
+
+[8] Sonkavde, G., Dharrao, D., Bongale, A. M., Deokate, S. T., Deepak,  D., & Bhat, S. K. (2023). Forecasting stock market prices using  machine learning and deep learning models: a systematic review,  
+learning models: CNN, RNN, LSTM, GRU. arXiv.org.  
+https://arxiv.org/abs/2305.17473v2 
+
 [9] Awad, A. L., Mesbah, S., & Fakhr, M. W. (2023). Stock market  prediction using deep reinforcement learning. Applied System  Innovation, 6(6), 106. https://doi.org/10.3390/asi6060106 
+
 [10] Cohen, G. (2022). Algorithmic trading and financial forecasting using  advanced artificial intelligence methodologies. Mathematics, 10(18),  3302. https://doi.org/10.3390/math10183302 
+
 [11] Zhong, X., & Enke, D. (2019). Predicting the daily return direction of  the stock market using hybrid machine learning algorithms. Financial  Innovation, 5(1). https://doi.org/10.1186/s40854-019-0138-0 
+
 [12] Kirilenko, A., Kyle, A. S., Samadi, M., & Tuzun, T. (2011). The  Flash crash: The impact of high frequency trading on an electronic  market. Social Science Research Network.  
 https://doi.org/10.2139/ssrn.1686004 
-[13] Shen, J., & Shafiq, O. (2020). Short-term stock market price trend  prediction using a comprehensive deep learning system. Journal of  Big Data, 7(1). https://doi.org/10.1186/s40537-020-00333-6 [14] AjNavneet. (2023.). GitHub - 
+
+[13] Shen, J., & Shafiq, O. (2020). Short-term stock market price trend  prediction using a comprehensive deep learning system. Journal of  Big Data, 7(1). https://doi.org/10.1186/s40537-020-00333-6 
+
+[14] AjNavneet. (2023.). GitHub - 
 AjNavneet/StockPricePrediction_YFinance_LSTM_RNN: Enhanced  stock prices forecasting using Yfinance, LSTM and RNN. GitHub.  https://github.com/AjNavneet/StockPricePrediction_YFinance_LST M_RNN 
+
 [15] Lim, S., Huh, J., Hong, S., Park, C., & Kim, J. (2022). Solar power  forecasting using CNN-LSTM hybrid model. Energies, 15(21), 8233.  https://doi.org/10.3390/en15218233 
+
 [16] Predicting Stock Market time-series data using CNN-LSTM Neural  Network model. (2023, Feb 29.). Ar5iv.  
 https://ar5iv.labs.arxiv.org/html/2305.14378 
+
 [17] Brownlee, J. (2019, Aug 6). How to configure the number of layers  and nodes in a neural network. MachineLearningMastery.com.  https://machinelearningmastery.com/how-to-configure-the-number of-layers-and-nodes-in-a-neural-network/ 
+
 [18] Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., &  Salakhutdinov, R. (2014). Dropout: A Simple Way to Prevent Neural  Networks from Overfitting.  
 https://jmlr.org/papers/v15/srivastava14a.html 
+
 [19] Brownlee, J. (2020, Apr 16). How do convolutional layers work in  deep learning neural networks? MachineLearningMastery.com.  https://machinelearningmastery.com/convolutional-layers-for-deep learning-neural-networks/ 
+
 [20] Shiri, F. M., Perumal, T., Mustapha, N., & Mohamed, R. (2023, May  
 
 6622927. 
@@ -112,18 +145,8 @@ Complexity, 2020
 
 https://doi.org/10.1155/2020/6622927
 
-
-
-[3] Levine, R., & Zervos, S. (1996). Stock market development and  Long-Run growth. The World Bank Economic Review, 10(2), 323– 339. https://doi.org/10.1093/wber/10.2.323 
-[4] Alshubiri, F. (2021). The stock market capitalisation and financial  growth nexus: an empirical study of western European countries.  Future Business Journal, 7(1). https://doi.org/10.1186/s43093-021- 00092-7 
-[5] Home. (n.d.). https://www.oecd-ilibrary.org/sites/5fa1c6e1- en/index.html?itemId=/content/component/5fa1c6e1-en 
-[6] Ortiz-Ospina, E., Beltekian, D., & Roser, M. (2023, Dec 28). Trade  and globalization. Our World in Data.  
-https://ourworldindata.org/trade-and-globalization 
-[7] Roser, M., Arriagada, P., Hasell, J., Ritchie, H., & Ortiz-Ospina, E.  (2023, Dec 28). Economic growth. Our World in Data.  
-https://ourworldindata.org/economic-growth 
-[8] Sonkavde, G., Dharrao, D., Bongale, A. M., Deokate, S. T., Deepak,  D., & Bhat, S. K. (2023). Forecasting stock market prices using  machine learning and deep learning models: a systematic review,  
-learning models: CNN, RNN, LSTM, GRU. arXiv.org.  
-https://arxiv.org/abs/2305.17473v2 
 [21] Understanding Neural Network Batch Training: A Tutorial -- Visual  Studio Magazine. (2014, Aug 1). Visual Studio Magazine.  https://visualstudiomagazine.com/articles/2014/08/01/batch training.aspx 
+
 [22] Brownlee, J. (2020, Aug 27). How to control the stability of training  neural networks with the batch size. MachineLearningMastery.com.  https://machinelearningmastery.com/how-to-control-the-speed-and stability-of-training-neural-networks-with-gradient-descent-batch size/ 
+
 [23] Jailani, N. L. M., Dhanasegaran, J. K., Alkawsi, G., Alkahtani, A. A.,  Phing, C. C., Baashar, Y., Capretz, L. F., Al-Shetwi, A. Q., & Tiong,  S. K. (2023, Mar 28). Investigating the power of LSTM-Based  models in solar energy forecasting. Processes, 11(5), 1382.  https://doi.org/10.3390/pr11051382
