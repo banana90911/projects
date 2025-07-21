@@ -62,15 +62,11 @@ To test these parameters, we have designed a loop  function which is to compare 
 In order to evaluate the performance of LSTM and CNN LSTM, Mean Squared Error (MSE), Root Mean Squared  Error (RMSE), Mean Absolute Error (MAE), and Correlation  Coefficient are used as evaluation metrics [23] [1]. 
 <img width="393" height="372" alt="Image" src="https://github.com/user-attachments/assets/bbda8318-eec0-44ba-951d-4bc104098ac9" />
 
-learning patterns and not memorizing noise. Training for too  many epochs can cause overfitting, where the model learns  the noise in the training data at the expense of its ability to  generalize, resulting in a decline in validation accuracy.  Finding the right number of epochs is a matter of  experimentation and balance, often aided by techniques like  early stopping, which halts training when validation  performance begins to worsen, ensuring the model is neither  underfit nor overfitted. In this case, as number of epochs  
-
 ### 4. RESULTS 
-Table 3: MSE, RMSE, MAE, and Correlation Coefficient for LSTM and  CNN-LSTM. 
-LSTM CNN-LSTM 
-MSE 822.8722 147.7533 RMSE 28.6857 12.1554 MAE 23.1519 6.6269 
-FIGURE III: Graph of Actual and Predicted Prices by CNN-LSTM 
+
 The metrics shown in Table 3 for LSTM and CNN-LSTM  models demonstrate a significant performance difference  between the two. The LSTM model shows a high Mean  Squared Error (MSE) of 822.8722 and a Root Mean Squared  Error (RMSE) of 28.6857, indicating substantial prediction  errors. Additionally, its Mean Absolute Error (MAE) is  23.11519, and it exhibits a weak negative correlation  coefficient of -0.3835, suggesting its predictions are inversely  related to actual trends, which is generally undesirable. In  contrast, the CNN-LSTM model markedly outperforms the  LSTM with much lower error metrics: an MSE of 147.7533,  an RMSE of 12.1554, and an MAE of 6.6269. It also shows  a moderate positive correlation coefficient of 0.5726,  indicating that its predictions are more aligned with the actual  data trends. This analysis clearly highlights that the CNN LSTM model is superior for this dataset, capturing spatial or  temporal patterns more effectively than the LSTM model. 
-5. CONCLUSIONS 
+
+### 5. CONCLUSIONS 
 In conclusion, this research presents a significant step  forward in the application of machine learning techniques for  stock price prediction, specifically through the utilization of  LSTM and CNN-LSTM models. The comparative analysis  
 
 Correlation  Coefficient 
