@@ -20,14 +20,14 @@ Table of Contents		2 <br>
 Introduction			3 <br>
 Literature Review		6 <br>
 1. Methodology			7 <br>
-	1.1 Planning  <br>
-	1.2 Front-end  <br>
-	1.3 Back-end (LSTM)  <br>
-	1.4 Back-end (Stock Grading)  <br>
-	1.5 Risks  <br>
-	1.6 Logical Testing  <br>
-	1.7 Back-end Unit Testing  <br>
-	1.8 Front-end Unit Testing  <br>
+> 1.1 Planning
+> 1.2 Front-end
+> 1.3 Back-end (LSTM)
+> 1.4 Back-end (Stock Grading)
+> 1.5 Risks
+> 1.6 Logical Testing
+> 1.7 Back-end Unit Testing
+> 1.8 Front-end Unit Testing
 2. Conclusions			15  <br>
 	2.1 Pros  <br>
 	2.2 Cons  <br>
