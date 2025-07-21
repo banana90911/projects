@@ -1,9 +1,9 @@
 # Stock Price Prediction Using Machine Learning:  LSTM & CNN-LSTM 
-Siheon Jung 
-Data science, B.S (engineering) 
-Pennsylvania State University 
-State College 
-spj5294@psu.edu 
+Siheon Jung<br>
+Data science, B.S (engineering)<br>
+Pennsylvania State University<br>
+State College<br>
+spj5294@psu.edu<br>
 
 Abstract — As economic growth occurred around the  world, the stock market also grew accordingly [3]. And  countless investors regardless of age or gender flocked into  the stock market. Investors jump into the stock market to  make profits, but things don't always go as they think,  because stock predictions are challenging for a variety of  reasons. One is that the stock index is influenced by  numerous factors, such as the growth rate of the overall  economy, the price level, bond yields, interest rates, the  country's exchange rate, returns from alternative investment  assets, and the revitalization of the labor market [3][4].  Another thing is that the stock index changes from time to  time due to these factors [4]. To solve this, it is planned to  develop a robust, accurate, and efficient machine learning  model for stock price prediction. Since it is close to  impossible to address and predict all factors that affect the  stock index, stock prices will be predicted using easily  accessible big data containing the open value, close value,  high value, low value, and volume of stocks. Stocks will use  S&P 500 stocks. Here, a faster and more accurate machine  learning model, rather than a human, will be used to verify  the data and predict the stock price. Among several machine  learning models, the LSTM (Long Short-Term Memory)  model, which is useful for predicting stock prices as well as  handling multiple time series data, which is one of RNN  (Recurrent Neural Network), was used [1]. In addition, rather  than just an LSTM model, a CNN-LSTM model was used,  which is a combination of CNN and LSTM model that  complements one of the weaknesses of LSTM, feature  extraction [2]. After validation, the CNN-LSTM model was  compared with the LSTM model using Mean Squared Error  (MSE), Root Mean Squared Error (RMSE), Mean Absolute  Error (MAE) and Correlation Coefficient. As a result, CNN LSTM showed a lot better performance than LSTM. 
 Keywords—Stock, Prediction, Machine Learning, LSTM, CNN. 
